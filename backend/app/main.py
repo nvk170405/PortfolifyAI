@@ -33,10 +33,10 @@ async def global_exception_handler(request: Request, exc: Exception):
     )
 
 
-# CORS — allow the Vite dev server
+# CORS — allow frontend origins
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
