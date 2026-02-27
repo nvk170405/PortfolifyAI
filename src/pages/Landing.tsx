@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Sparkles, Layout, FileText, BarChart3, Target, Zap, CheckCircle2 } from 'lucide-react';
 import SectionWrapper from '../components/layout/SectionWrapper';

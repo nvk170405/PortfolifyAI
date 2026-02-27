@@ -9,7 +9,6 @@ import {
     LogOut,
     Menu,
     X,
-    User,
     Bell,
     Briefcase,
     Search,
