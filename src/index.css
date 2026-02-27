@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark-900: #000000;
+  --color-dark-800: #111111;
+  --color-dark-700: #1A1A1A;
+  --color-dark-600: #2E2E2E;
+  
+  --color-light-100: #FFFFFF;
+  --color-light-200: #F9FAFB;
+  --color-light-300: #E6E6E6;
+  --color-light-400: #D1D5DB;
+
+  --font-sans: 'Inter', sans-serif;
+
+  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+  --shadow-nav: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+  --shadow-card: 0 10px 40px -10px rgba(0,0,0,0.08);
+}
+
+@layer base {
+  body {
+    @apply bg-light-200 text-dark-800 font-sans antialiased selection:bg-dark-900 selection:text-white;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-medium tracking-tight;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-lg border border-white/20 shadow-glass rounded-3xl overflow-hidden transition-all duration-300;
+  }
+  
+  .glass-nav {
+    @apply bg-white/80 backdrop-blur-md border-b border-light-300/50 shadow-nav z-50;
+  }
+  
+  .btn-primary {
+    @apply bg-dark-900 text-white rounded-full px-6 py-3 font-medium hover:bg-dark-700 transition-colors duration-200 focus:ring-4 focus:ring-dark-900/20 active:scale-95 flex items-center justify-center gap-2;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-dark-900 border border-light-400 rounded-full px-6 py-3 font-medium hover:bg-light-200 hover:border-dark-600 transition-colors duration-200 focus:ring-4 focus:ring-dark-900/10 active:scale-95 flex items-center justify-center gap-2 shadow-sm;
+  }
+  
+  .btn-ghost {
+    @apply bg-transparent text-dark-800 rounded-full px-6 py-3 font-medium hover:bg-dark-900/5 transition-colors duration-200 active:scale-95 flex items-center justify-center gap-2;
+  }
+  
+  .input-field {
+    @apply w-full bg-white border border-light-400 rounded-2xl px-5 py-4 text-dark-800 placeholder-dark-600/50 focus:outline-none focus:ring-2 focus:ring-dark-900 focus:border-transparent transition-all;
+  }
+}

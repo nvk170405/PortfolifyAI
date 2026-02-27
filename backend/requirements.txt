@@ -1,0 +1,9 @@
+fastapi[standard]
+uvicorn[standard]
+pymongo[srv]
+pydantic-settings
+python-jose[cryptography]
+bcrypt
+python-multipart
+google-generativeai
+google-auth
