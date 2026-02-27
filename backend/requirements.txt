@@ -7,4 +7,5 @@ bcrypt
 python-multipart
 openai
 google-auth
+requests
 gunicorn
